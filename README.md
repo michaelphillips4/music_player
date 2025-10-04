@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+https://docs.amplify.aws/react/build-a-backend/data/set-up-data/
+
+npm create amplify@latest
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
