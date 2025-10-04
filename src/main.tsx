@@ -6,7 +6,7 @@ import { Nav } from './Nav.tsx'
 import './site.css'
 import { Amplify } from 'aws-amplify';
 // @ts-ignore
-import outputs from '/amplify_outputs.json';
+import outputs from '../amplify_outputs.json' ;
 Amplify.configure(outputs);
 
 
