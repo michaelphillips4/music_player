@@ -1,5 +1,5 @@
 import { Authenticator, Input, Label } from '@aws-amplify/ui-react';
-import { Amplify } from 'aws-amplify';
+
 import {
   Button,
   DropZone,
@@ -10,26 +10,27 @@ import {
 import  { useState,useRef } from 'react';
 
 
-// @ts-ignore
-import outputs from '/amplify_outputs.json';
+
 import '@aws-amplify/ui-react/styles.css';
 
-Amplify.configure(outputs);
 
 export default function Editor() {
   return (<>
-    <p >Either Login or Create a new Account below</p>
+     <p></p>
     <Authenticator initialState="signUp">
-     
+    
       {({ signOut, user }) => (
         <main>
-          <h1>Hello {user?.username}</h1>
+          <p>Hello {user?.username}</p>
           <button onClick={signOut}>Sign out</button>
+          <p></p>
           <DropZoneInputExample />  
            <Label htmlFor="by">by:</Label>
     <Input id="by" name="by" />
      <Label htmlFor="name">name:</Label>
     <Input id="name" name="name" />
+    <p></p>
+     <button >Save</button>
         </main>
       )}
     </Authenticator></>)}
