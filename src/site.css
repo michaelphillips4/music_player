@@ -39,3 +39,8 @@ li {
     text-align: right
 
 }
+
+#root div[data-amplify-container] {
+    background-color: red  ;
+    place-self: start   ;
+}
