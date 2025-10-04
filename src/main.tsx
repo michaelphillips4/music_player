@@ -4,11 +4,15 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router'
 import { Nav } from './Nav.tsx'
 import './site.css'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
      <BrowserRouter>
+  
+      <h1>Music Player Experiment</h1>
       <Nav />
       <App />
+
      </BrowserRouter>
    
   </StrictMode>,

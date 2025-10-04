@@ -1,4 +1,37 @@
+:root {
+    color-scheme: light dark;
+    --bg: light-dark(white, #100c08);
+    --font-family: Verdana, sans-serif;
+    --font-color: light-dark(#100c08, rgb(230, 230, 230));
+}
+
+
+body {
+    font-family: var(--font-family);
+    margin: 20px;
+    background-color: var(--bg);
+    font-family: var(--font-family);
+    color: var(--font-color);
+}
+
+
 [aria-current="page"] {
- text-decoration: underline  
-   
+    text-decoration: underline
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+li {
+    padding: 10px;
+}
+
+
+.status {
+
+    text-align: right
+
 }

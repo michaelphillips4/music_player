@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
-import { bucketUrl, getFriendlyNameFromUrl, useAPIMusicList } from '../Data';
+import { bucketUrl,getFriendlyNameFromUrl} from '../Data';
+import useAPIMusicList from '../useAPIMusicList';    
 
 function Player() {
     const { data, error, loading } = useAPIMusicList(bucketUrl);
@@ -26,11 +27,12 @@ function Player() {
             </audio>
             <ol>
                 {loading ?
-                    (<li>Loading... {error?.message}</li>) : (data.map((url, index) => (
+                    (<li>Loading... {error?.message}</li>) :
+                    (Object.keys(data).map((key, index) => (
                         <li key={index}><a href="#"
                             onClick=
-                            {e => { e.preventDefault(); updateSong(url); }}
-                        >{getFriendlyNameFromUrl(url)}</a></li>
+                            {e => { e.preventDefault(); updateSong(data[key]); }}
+                        >{getFriendlyNameFromUrl(data[key])}</a></li>
                     ))
 
                     )}
@@ -41,4 +43,3 @@ function Player() {
 }
 
 export default Player;
-

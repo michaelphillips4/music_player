@@ -1,15 +1,15 @@
-import { getFriendlyNameFromUrl } from "./Data"
 
-function Song({url}:{url: string}){
+
+function Song({ url, name }: { url: string, name: string }) {
 
     return (
-      <>
-            <p>{getFriendlyNameFromUrl(url)}</p>
+        <>
+            <p>{name}</p>
             <audio controls>
                 <source src={url} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
-    </>
+        </>
     )
 }
 
