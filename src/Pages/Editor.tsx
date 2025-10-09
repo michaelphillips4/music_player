@@ -7,7 +7,7 @@ import {
   Text,
   VisuallyHidden,
 } from '@aws-amplify/ui-react';
-import  { useState,useRef } from 'react';
+import { useState, useRef } from 'react';
 
 
 
@@ -15,30 +15,30 @@ import '@aws-amplify/ui-react/styles.css';
 
 
 export default function Editor() {
-  return (<>
-     <p></p>
-    <Authenticator initialState="signUp">
-    
+  return (
+    <Authenticator hideSignUp variation="modal">
+
       {({ signOut, user }) => (
         <main>
           <p>Hello {user?.username}</p>
           <button onClick={signOut}>Sign out</button>
           <p></p>
-          <DropZoneInputExample />  
-           <Label htmlFor="by">by:</Label>
-    <Input id="by" name="by" />
-     <Label htmlFor="name">name:</Label>
-    <Input id="name" name="name" />
-    <p></p>
-     <button >Save</button>
+          <DropZoneInputExample />
+          <Label htmlFor="by">by:</Label>
+          <Input id="by" name="by" />
+          <Label htmlFor="name">name:</Label>
+          <Input id="name" name="name" />
+          <p></p>
+          <button >Save</button>
         </main>
       )}
-    </Authenticator></>)}
+    </Authenticator>)
+}
 
 
 const acceptedFileTypes = ['image/png', 'image/jpeg'];
 
- function DropZoneInputExample() {
+function DropZoneInputExample() {
   const [files, setFiles] = useState<File[]>([]);
   const hiddenInput = useRef<HTMLInputElement>(null);
 
@@ -52,9 +52,9 @@ const acceptedFileTypes = ['image/png', 'image/jpeg'];
 
   return (
     <>
-       <DropZone
+      <DropZone
         acceptedFileTypes={acceptedFileTypes}
-        onDropComplete={({ acceptedFiles}) => {
+        onDropComplete={({ acceptedFiles }) => {
           setFiles(acceptedFiles);
         }}
       >

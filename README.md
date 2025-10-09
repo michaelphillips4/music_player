@@ -6,4 +6,4 @@ npm create amplify@latest
 
 https://docs.amplify.aws/react/how-amplify-works/
 
-T
+npx ampx sandbox

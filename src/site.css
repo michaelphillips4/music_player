@@ -1,46 +1,49 @@
-:root {
-    color-scheme: light dark;
-    --bg: light-dark(white, #100c08);
-    --font-family: Verdana, sans-serif;
-    --font-color: light-dark(#100c08, rgb(230, 230, 230));
+
+.encore-image {
+    width: 80px;
+    height: 80px;
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.85rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 
-body {
-    font-family: var(--font-family);
-    margin: 20px;
-    background-color: var(--bg);
-    font-family: var(--font-family);
-    color: var(--font-color);
+iframe {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
+audio {
 
-[aria-current="page"] {
-    text-decoration: underline
+    padding-left: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-
-}
+nav{
+    text-align: center;
+    margin-bottom: 20px;
+    }
 
 nav a {
-    margin-right: 5px;
-}
-
-li {
-    padding: 10px;
-}
-
-
-.status {
-
-    text-align: right
-
-}
-
-#root div[data-amplify-container] {
-    background-color: red  ;
-    place-self: start   ;
+    margin-right: 8px;
 }

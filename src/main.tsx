@@ -5,20 +5,23 @@ import { BrowserRouter } from 'react-router'
 import { Nav } from './Nav.tsx'
 import './site.css'
 import { Amplify } from 'aws-amplify';
+
 // @ts-ignore
-import outputs from '../amplify_outputs.json' ;
+import outputs from '../amplify_outputs.json';
+import Bio from './components/Bio.tsx'
 Amplify.configure(outputs);
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-     <BrowserRouter>
-  
-      <h1>Music Player Experiment</h1>
+    <BrowserRouter>
+      <header>
+        <h1>Michael Phillips</h1>
+      </header>
       <Nav />
+      <Bio />
       <App />
+    </BrowserRouter>
 
-     </BrowserRouter>
-   
   </StrictMode>,
 )
