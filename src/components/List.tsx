@@ -1,5 +1,5 @@
 
-import Song from '../Song'
+import Song from './Song'
 import { bucketUrl} from '../Data';
 import useAPIMusicList from '../useAPIMusicList';
 
